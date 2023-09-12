@@ -1,6 +1,6 @@
 ## Streamlit bot
 
-![Screenshot from 2023-06-09 00-36-26](https://github.com/go-skynet/LocalAI/assets/2420543/e98b4305-fa2d-41cf-9d2f-1bb2d75ca902)
+![Screenshot from 2023-06-09 00-36-26](streamlit-bot.png)
 
 This is an example to deploy a Streamlit bot with LocalAI instead of OpenAI. Instructions are for Windows.
 
@@ -56,7 +56,7 @@ cd ..\localai_streamlit_bot
 # run the bot
 start_windows.bat
 
-# Visit http://localhost:8501/ from browser
+# UI will be launched automatically (http://localhost:8501/) in browser.
 
 ```
 
