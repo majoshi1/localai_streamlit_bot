@@ -24,7 +24,7 @@ cd ..
 # Clone example
 git clone https://github.com/majoshi1/localai_streamlit_bot
 
-cd chatgpt_streamlit_bot
+cd localai_streamlit_bot
 
 install_requirements.bat
 
@@ -32,6 +32,8 @@ install_requirements.bat
 python download-model.py TheBloke/mpt-30B-chat-GGML --specific-file mpt-30b-chat.ggmlv0.q4_1.bin --output ..\LocalAI\models --clean --max-retries 10
 
 cd ..\LocalAI
+
+# Install Docker Desktop
 
 # start with docker-compose
 docker-compose up -d --pull always
