@@ -1,10 +1,12 @@
 ## Streamlit bot
 
-![Screenshot from 2023-06-09 00-36-26](streamlit-bot.png)
+![Screenshot](streamlit-bot.png)
 
 This is an example to deploy a Streamlit bot with LocalAI instead of OpenAI. Instructions are for Windows.
 
-```
+```bash
+# Install & run Git Bash
+
 # Clone LocalAI
 git clone https://github.com/go-skynet/LocalAI
 
@@ -18,22 +20,10 @@ cp -rf prompt-templates/ggml-gpt4all-j.tmpl models/
 
 # (optional) Edit the .env file to set things like context size and threads
 # vim .env
-
-cd ..
-
-# Clone example
-git clone https://github.com/majoshi1/localai_streamlit_bot
-
-cd localai_streamlit_bot
-
-install_requirements.bat
-
 # Download model
-python download-model.py TheBloke/mpt-30B-chat-GGML --specific-file mpt-30b-chat.ggmlv0.q4_1.bin --output ..\LocalAI\models --clean --max-retries 10
+curl --progress-bar -C - -O https://gpt4all.io/models/ggml-gpt4all-j.bin -o models/ggml-gpt4all-j.bin
 
-cd ..\LocalAI
-
-# Install Docker Desktop
+# Install Docker Desktop for Windows
 
 # start with docker-compose
 docker-compose up -d --pull always
@@ -51,7 +41,14 @@ curl http://localhost:8080/v1/chat/completions -H "Content-Type: application/jso
 
 # {"model":"ggml-gpt4all-j","choices":[{"message":{"role":"assistant","content":"I'm doing well, thanks. How about you?"}}]}
 
-cd ..\localai_streamlit_bot
+cd ..
+
+# Clone example
+git clone https://github.com/majoshi1/localai_streamlit_bot
+
+cd localai_streamlit_bot
+
+install_requirements.bat
 
 # run the bot
 start_windows.bat
