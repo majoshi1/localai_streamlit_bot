@@ -23,7 +23,8 @@ cp -rf prompt-templates/ggml-gpt4all-j.tmpl models/
 # Download model
 curl --progress-bar -C - -O https://gpt4all.io/models/ggml-gpt4all-j.bin > models/ggml-gpt4all-j.bin
 
-# Install Docker Desktop for Windows
+# Install & Run Docker Desktop for Windows
+https://www.docker.com/products/docker-desktop/
 
 # start with docker-compose
 docker-compose up -d --pull always
