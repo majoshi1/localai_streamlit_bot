@@ -21,7 +21,7 @@ cp -rf prompt-templates/ggml-gpt4all-j.tmpl models/
 # (optional) Edit the .env file to set things like context size and threads
 # vim .env
 # Download model
-curl --progress-bar -C - -O https://gpt4all.io/models/ggml-gpt4all-j.bin -o models/ggml-gpt4all-j.bin
+curl --progress-bar -C - -O https://gpt4all.io/models/ggml-gpt4all-j.bin > models/ggml-gpt4all-j.bin
 
 # Install Docker Desktop for Windows
 
